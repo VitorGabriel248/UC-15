@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Suspenso Aprimorado</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif; /* Fonte do corpo */
+            margin: 0; /* Remove margens padrão */
+            background-color: #f0f0f0; /* Cor de fundo da página */
+        }
+ 
+        h2 {
+            text-align: center; /* Centraliza o título */
+            color: #a83e3e; /* Cor do título */
+        }
+ 
+        p {
+            text-align: center; /* Centraliza o texto do parágrafo */
+            color: #333; /* Cor do texto */
+        }
+ 
+        /* Estilo do menu suspenso */
+        .dropdown {
+            position: relative;
+            display: inline-block; /* Permite que o menu suspenso fique ao lado de outros elementos */
+            cursor: pointer; /* Muda o cursor ao passar sobre o menu */
+            padding: 10px; /* Adiciona preenchimento ao menu */
+            background-color: #a83e3e; /* Cor de fundo do menu */
+            color: white; /* Cor do texto do menu */
+            border-radius: 5px; /* Borda arredondada */
+            transition: background-color 0.3s; /* Efeito de transição na cor de fundo */
+        }
+ 
+        .dropdown:hover {
+            background-color: #b54d4d; /* Muda a cor de fundo ao passar o mouse */
+        }
+ 
+        /* Estilo do conteúdo suspenso */
+        .dropdown-content {
+            display: none; /* Esconde o conteúdo por padrão */
+            position: absolute; /* Posiciona o conteúdo em relação ao menu */
+            background-color: #ffffff; /* Cor de fundo do conteúdo suspenso */
+            min-width: 160px; /* Largura mínima do conteúdo */
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Sombra do conteúdo */
+            border-radius: 5px; /* Borda arredondada do conteúdo */
+            z-index: 1; /* Garante que o conteúdo fique acima de outros elementos */
+            margin-top: 5px; /* Espaçamento entre o menu e o conteúdo */
+            padding: 10px; /* Preenchimento interno do conteúdo */
+        }
+ 
+        /* Exibe o conteúdo suspenso ao passar o mouse */
+        .dropdown:hover .dropdown-content {
+            display: block; /* Mostra o conteúdo ao passar o mouse */
+        }
+ 
+        /* Estilo dos itens dentro do conteúdo suspenso */
+        .dropdown-content p {
+            color: #333; /* Cor do texto dentro do conteúdo */
+            margin: 0; /* Remove margens dos parágrafos */
+        }
+    </style>
+</head>
+<body>
+    <h2>Menu Suspenso Aprimorado</h2>
+    <p>Mova o mouse sobre o texto abaixo para abrir o conteúdo suspenso:</p>
+ 
+    <div class="dropdown">
+        <span>Clique aqui</span>
+        <div class="dropdown-content">
+            <p>Hello World!</p>
+        </div>
+    </div>
+</body>
+</html>
+ 

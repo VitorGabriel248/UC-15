@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria 02</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+ 
+        div.gallery{
+            border: 1px solid coral;
+            margin-bottom: 10px;
+        }
+ 
+        div.gallery:hover{
+            border: 1px solid orange;
+        }
+ 
+        div.gallery img{
+            width: 100%;
+            height: auto;
+        }
+ 
+        div.desc{
+            padding: 15px;
+            text-align: center;
+        }
+ 
+        .responsive{
+            padding: 0 6px;
+            float: left;
+            width: 24.99999%; /* aqui abriria se fosse uma tela gigante (24.99999 polegadas) */
+        }
+ 
+        @media only screen and (max-widht:700px){
+            .responsive{
+                width: 49.99999%; /* aqui pega a largura total em px */
+                margin: 6px 0;
+            }
+        }
+ 
+        @media only screen and (max-widht:500px){
+            .responsive{
+                width:100%;
+               
+            }
+        }
+ 
+        .clearfix::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+ 
+    </style>
+</head>
+ 
+<body>
+    <h2>Galeria de imagens responsivas</h2>
+    <h4>Redimensione a janela do navegador para ver o efeito</h4>
+ 
+    <div class="Responsividade">
+        <div class="gallery">
+            <a target="_blank" href="imagem/bolt.jpg">
+                <img src="imagem/bolt.jpg" alt="">
+            </a>
+            <div class="desc"> Adicionar descrição</div>
+        </div>
+ 
+    </div>
+ 
+    <div class="Responsividade">
+        <div class="gallery">
+            <a target="_blank" href="imagem/bolt.jpg">
+                <img src="imagem/bolt.jpg" alt="">
+            </a>
+            <div class="desc"> Adicionar descrição</div>
+        </div>
+ 
+    </div>
+ 
+    <div class="Responsividade">
+        <div class="gallery">
+            <a target="_blank" href="imagem/bolt.jpg">
+                <img src="imagem/bolt.jpg" alt="">
+            </a>
+            <div class="desc"> Adicionar descrição</div>
+        </div>
+ 
+    </div>
+ 
+    <div class="Responsividade">
+        <div class="gallery">
+            <a target="_blank" href="imagem/bolt.jpg">
+                <img src="imagem/bolt.jpg" alt="">
+            </a>
+            <div class="desc"> Adicionar descrição</div>
+        </div>
+ 
+    </div>
+ 
+    <div class="clearfix"></div>
+    <div style="padding: 6px;">
+        <p>Este exemplo usa media queries para reorganizar as imagens em diferentes tamanhos de tela: para telas maiores que 700px de largura, ele mostrará quatro imagens lado a lado; para telas menores que 700px, mostrará duas imagens lado a lado. Para telas menores que 500px, as imagens serão empilhadas verticalmente (100%).</p>
+    <p>Você aprenderá mais sobre consultas de mídia e web design responsivo posteriormente em nosso tutorial CSS.</p>
+ 
+    </div>
+ 
+ 
+</body>
+ 
+ 
+</html>

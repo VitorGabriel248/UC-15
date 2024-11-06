@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de imagem 1</title>
+    <style>
+ 
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color:red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 100vh; /* vh é vertical e horizontal */
+            margin: 0;
+        }
+ 
+        .gallery-container{
+            display: flex;
+            flex-wrap: wrap; /* permite que as galerias quebrem para a proxima linha */
+            justify-content: center;
+            max-width: 90%;
+        }
+ 
+        div.gallery{
+            margin: 5px;
+            border: 1px solid #ccc;
+            width: 180px;
+            background-color: aliceblue;
+            transition: border 0.3s;
+            text-align: center;
+        }
+ 
+        div.gallery:hover{
+            border: 1px solid #777;
+        }
+ 
+        div.gallery img{
+            width: 100%;
+            height: 120px;
+            object-fit: cover; /* ajusta a imagem se distorcer */
+        }
+ 
+        div.desc{
+padding: 15px;
+text-align: center;
+        }
+       
+    </style>
+</head>
+<body>
+    <h2>É O TRICOLOR!!!</h2>
+    <div class="gallery-container">
+ 
+        <div class="gallery">
+            <a href="imagem/bolt.jpg" target="_blank">
+                <img src="imagem/bolt.jpg" alt="">
+            </a>
+            <div class="desc">Adicionar decrição</div>
+        </div>
+ 
+        <div class="gallery">
+            <a href="imagem/bolt.jpg" target="_blank">
+                <img src="imagem/bolt.jpg" alt="">
+            </a>
+            <div class="desc">Adicionar decrição</div>
+        </div>
+ 
+        <div class="gallery">
+            <a href="imagem/bolt.jpg" target="_blank">
+                <img src="imagem/bolt.jpg" alt="">
+            </a>
+            <div class="desc">Adicionar decrição</div>
+        </div>
+ 
+    </div>
+   
+</body>
+</html>
+ 

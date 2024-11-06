@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Suspenso Aprimorado</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif; /* Fonte do corpo */
+            margin: 0; /* Remove margens padrão */
+            background-color: #f0f0f0; /* Cor de fundo da página */
+        }
+ 
+        h2 {
+            text-align: center; /* Centraliza o título */
+            color: #a83e3e; /* Cor do título */
+        }
+ 
+        p {
+            text-align: center; /* Centraliza o texto do parágrafo */
+            color: #333; /* Cor do texto */
+        }
+ 
+        /* Estilo do menu suspenso */
+        .dropdown {
+            position: relative;
+            display: inline-block; /* Permite que o menu suspenso fique ao lado de outros elementos */
+            cursor: pointer; /* Muda o cursor ao passar sobre o menu */
+            padding: 10px; /* Adiciona preenchimento ao menu */
+            background-color: #a83e3e; /* Cor de fundo do menu */
+            color: white; /* Cor do texto do menu */
+            border-radius: 5px; /* Borda arredondada */
+            transition: background-color 0.3s; /* Efeito de transição na cor de fundo */
+        }
+ 
+        .dropdown:hover {
+            background-color: #b54d4d; /* Muda a cor de fundo ao passar o mouse */
+        }
+ 
+        /* Estilo do conteúdo suspenso */
+        .dropdown-content {
+            display: none; /* Esconde o conteúdo por padrão */
+            position: absolute; /* Posiciona o conteúdo em relação ao menu */
+            background-color: #ffffff; /* Cor de fundo do conteúdo suspenso */
+            min-width: 160px; /* Largura mínima do conteúdo */
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); /* Sombra do conteúdo */
+            border-radius: 5px; /* Borda arredondada do conteúdo */
+            z-index: 1; /* Garante que o conteúdo fique acima de outros elementos */
+            margin-top: 5px; /* Espaçamento entre o menu e o conteúdo */
+            padding: 10px; /* Preenchimento interno do conteúdo */
+        }
+ 
+        /* Exibe o conteúdo suspenso ao passar o mouse */
+        .dropdown:hover .dropdown-content {
+            display: block; /* Mostra o conteúdo ao passar o mouse */
+        }
+ 
+        /* Estilo dos itens dentro do conteúdo suspenso */
+        .dropdown-content p {
+            color: #333; /* Cor do texto dentro do conteúdo */
+            margin: 0; /* Remove margens dos parágrafos */
+        }
+    </style>
+</head>
+<body>
+    <h2>Menu Suspenso Aprimorado</h2>
+    <p>Mova o mouse sobre o texto abaixo para abrir o conteúdo suspenso:</p>
+ 
+    <div class="dropdown">
+        <span>Clique aqui</span>
+        <div class="dropdown-content">
+            <p>Hello World!</p>
+        </div>
+    </div>
+</body>
+</html>
+ 
+ 
+ 
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Define a visualização responsiva para dispositivos móveis -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* Estilos gerais para o corpo do documento */
+        body {
+            font-family: Arial, Helvetica, sans-serif; /* Fonte do texto */
+            margin: 0; /* Remove margens padrão */
+        }
+ 
+        /* Estilos para a barra de navegação */
+        .navbar {
+            overflow: hidden; /* Para evitar que o conteúdo transborde */
+            background-color: #d1bbbb; /* Cor de fundo da barra */
+        }
+ 
+        /* Estilos para os links da barra de navegação */
+        .navbar a {
+            float: left; /* Alinha os links à esquerda */
+            font-size: 16px; /* Tamanho da fonte dos links */
+            color: white; /* Cor do texto dos links */
+            text-align: center; /* Alinhamento do texto ao centro */
+            padding: 14px 16px; /* Espaçamento interno dos links */
+            text-decoration: none; /* Remove sublinhado dos links */
+        }
+ 
+        /* Estilos para submenus */
+        .subnav {
+            float: left; /* Alinha os submenus à esquerda */
+            overflow: auto; /* Para evitar transbordamento do submenu */
+            background-color: rgb(42, 101, 103); /* Cor de fundo do submenu */
+        }
+ 
+        /* Estilos para botões de sub-menu */
+        .subnav .subnavbtn {
+            font-size: 16px; /* Tamanho da fonte do botão do submenu */
+            border: none; /* Remove bordas do botão */
+            outline: none; /* Remove contorno ao focar */
+            color: rgb(250, 250, 250); /* Cor do texto do botão */
+            padding: 14px 16px; /* Espaçamento interno do botão */
+            background-color: rgb(156, 54, 126); /* Cor de fundo do botão */
+            font-family: inherit; /* Usa a fonte herdada do body */
+            margin: 0; /* Remove margens do botão */
+        }
+ 
+        /* Estilo ao passar o mouse sobre os links e botões */
+        .navbar a:hover, .subnav:hover .subnavbtn {
+            background-color: rgb(141, 122, 161); /* Muda a cor de fundo ao passar o mouse */
+        }
+ 
+        /* Estilos para o conteúdo do submenu */
+        .subnav-content {
+            display: none; /* Oculta o submenu inicialmente */
+            position: absolute; /* Posiciona o submenu em relação ao botão */
+            left: 0; /* Alinha o submenu à esquerda do botão */
+            background-color: rgb(174, 108, 176); /* Cor de fundo do submenu */
+            width: 100%; /* Largura do submenu */
+            z-index: 1; /* Para garantir que o submenu fique acima de outros elementos */
+        }
+ 
+        /* Estilos para links dentro do submenu */
+        .subnav-content a {
+            float: left; /* Alinha os links à esquerda */
+            color: rgb(253, 253, 253); /* Cor do texto dos links do submenu */
+            text-decoration: none; /* Remove sublinhado dos links do submenu */
+        }
+ 
+        /* Estilo ao passar o mouse sobre os links do submenu */
+        .subnav-content a:hover {
+            background-color: rgb(193, 33, 214); /* Muda a cor de fundo ao passar o mouse */
+            color: black; /* Muda a cor do texto ao passar o mouse */
+        }
+ 
+        /* Exibe o submenu ao passar o mouse sobre o botão do submenu */
+        .subnav:hover .subnav-content {
+            display: block; /* Mostra o submenu */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home">Principal</a> <!-- Link para a seção Principal -->
+        <div class="subnav">
+            <button class="subnavbtn">Sobre <i class="fa fa-caret-down"></i></button> <!-- Botão para o submenu "Sobre" -->
+            <div class="subnav-content">
+                <a href="#company">Companhia</a> <!-- Link para a seção Companhia -->
+                <a href="#team">Equipe</a> <!-- Link para a seção Equipe -->
+                <a href="#careers">Carreiras</a> <!-- Link para a seção Carreiras -->
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Serviços <i class="fa fa-caret-down"></i></button> <!-- Botão para o submenu "Serviços" -->
+            <div class="subnav-content">
+                <a href="#bring">Trazer</a> <!-- Link para a seção Trazer -->
+                <a href="#deliver">Entregar</a> <!-- Link para a seção Entregar -->
+                <a href="#package">Pacote</a> <!-- Link para a seção Pacote -->
+                <a href="#express">Expresso</a> <!-- Link para a seção Expresso -->
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Parceiros <i class="fa fa-caret-down"></i></button> <!-- Botão para o submenu "Parceiros" -->
+            <div class="subnav-content">
+                <a href="#link1">Nike</a> <!-- Link para o primeiro parceiro -->
+                <a href="#link2">Adidas</a> <!-- Link para o segundo parceiro -->
+                <a href="#link3">Lacoste</a> <!-- Link para o terceiro parceiro -->
+                <a href="#link4">Vans</a> <!-- Link para o quarto parceiro -->
+            </div>
+        </div>
+        <a href="#contact">Contatos</a> <!-- Link para a seção Contatos -->
+    </div>
+    <div style="padding:0 16px">
+        <h3>Subnav/menu suspenso dentro de uma barra de navegação</h3>
+        <p>Passe o mouse sobre o link "Sobre", "Serviços" ou "Parceiros" para ver o submenu de navegação.</p>
+    </div>
+</body>
+</html>
+ 
+ 

@@ -1,0 +1,86 @@
+Menu SiteBar: <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Lateral Oculto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            transition: margin-left 0.5s; /* Suaviza a transição do conteúdo */
+        }
+ 
+        /* Estilo para o menu lateral */
+        .sidebar {
+            height: 100%; /* Altura total da página */
+            width: 60px; /* Largura inicial do menu */
+            position: fixed; /* Fixa o menu na lateral */
+            top: 0; /* Alinha ao topo */
+            left: 0; /* Alinha à esquerda */
+            background-color: #c061bb; /* Cor de fundo do menu */
+            overflow-x: hidden; /* Esconde o conteúdo horizontal */
+            transition: 0.5s; /* Suaviza a transição ao abrir e fechar */
+        }
+ 
+        /* Estilo dos links do menu */
+        .sidebar a {
+            padding: 15px 10px; /* Espaçamento interno dos links */
+            text-decoration: none; /* Remove sublinhado */
+            font-size: 16px; /* Tamanho da fonte */
+            color: white; /* Cor do texto */
+            display: block; /* Faz os links ocuparem toda a largura */
+            transition: 0.3s; /* Transição suave ao passar o mouse */
+            opacity: 0; /* Inicialmente invisível */
+            visibility: hidden; /* Oculta os links */
+        }
+ 
+        /* Efeito ao passar o mouse no menu */
+        .sidebar:hover {
+            width: 200px; /* Largura ao passar o mouse */
+        }
+ 
+        /* Exibe os links ao passar o mouse */
+        .sidebar:hover a {
+            opacity: 1; /* Torna os links visíveis */
+            visibility: visible; /* Exibe os links */
+        }
+ 
+        /* Exibe os links normalmente quando o mouse está sobre o menu */
+        .sidebar a:hover {
+            background-color: #575757; /* Cor de fundo ao passar o mouse */
+        }
+ 
+        /* Estilo para o conteúdo principal */
+        .main {
+            margin-left: 60px; /* Espaço à esquerda para o menu */
+            padding: 20px; /* Espaçamento interno do conteúdo */
+            transition: margin-left 0.5s; /* Suaviza a transição do conteúdo */
+        }
+ 
+        /* Muda a margem quando o menu é expandido */
+        .sidebar:hover ~ .main {
+            margin-left: 200px; /* Aumenta a margem do conteúdo quando o menu é aberto */
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="sidebar">
+        <a href="#">Início</a>
+        <a href="#">Sobre</a>
+        <a href="#">Serviços</a>
+        <a href="#">Contato</a>
+        <a href="#">Blog</a>
+    </div>
+ 
+    <div class="main">
+        <h1>Página Principal</h1>
+        <p>Conteúdo aqui...</p>
+        <p>Mais conteúdo...</p>
+        <p>Experimente passar o mouse no menu lateral.</p>
+    </div>
+ 
+</body>
+</html>

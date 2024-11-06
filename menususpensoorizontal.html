@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu de Navegação Aprimorado</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif; /* Fonte do corpo */
+            margin: 0; /* Remove margens padrão */
+            background-color: #f0f0f0; /* Cor de fundo da página */
+        }
+ 
+        /* Estilo da lista não ordenada */
+        ul {
+            list-style-type: none; /* Remove marcadores da lista */
+            margin: 0; /* Remove margens */
+            padding: 0; /* Remove preenchimento */
+            overflow: hidden; /* Oculta qualquer conteúdo que transborde */
+            background-color: #db9bd3; /* Cor de fundo da barra de navegação */
+        }
+ 
+        /* Estilo dos itens da lista */
+        li {
+            float: left; /* Faz com que os itens fiquem lado a lado */
+        }
+ 
+        /* Estilo dos links */
+        li a, .dropbtn {
+            display: inline-block; /* Exibe os links em bloco */
+            color: rgb(7, 7, 7); /* Cor do texto */
+            text-align: center; /* Centraliza o texto */
+            padding: 14px 16px; /* Preenchimento interno */
+            text-decoration: none; /* Remove o sublinhado */
+            transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+        }
+ 
+        /* Efeito hover para links e botões do dropdown */
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: rgb(218, 177, 219); /* Cor de fundo ao passar o mouse */
+        }
+ 
+        /* Estilo do item do dropdown */
+        li.dropdown {
+            display: inline-block; /* Permite que o item do dropdown fique ao lado de outros */
+        }
+ 
+        /* Estilo do conteúdo do dropdown */
+        .dropdown-content {
+            display: none; /* Esconde o conteúdo do dropdown por padrão */
+            position: absolute; /* Posiciona o conteúdo em relação ao item do dropdown */
+            background-color: #f9f9f9; /* Cor de fundo do conteúdo do dropdown */
+            min-width: 160px; /* Largura mínima do conteúdo */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra do conteúdo */
+            z-index: 1; /* Garante que o conteúdo fique acima de outros elementos */
+        }
+ 
+        /* Estilo dos links dentro do conteúdo do dropdown */
+        .dropdown-content a {
+            color: black; /* Cor do texto dos links do dropdown */
+            padding: 12px 16px; /* Preenchimento interno dos links */
+            text-decoration: none; /* Remove o sublinhado */
+            display: block; /* Exibe os links em bloco */
+            text-align: left; /* Alinha o texto à esquerda */
+        }
+ 
+        /* Efeito hover para links do dropdown */
+        .dropdown-content a:hover {
+            background-color: #f1f1f1; /* Cor de fundo ao passar o mouse */
+        }
+ 
+        /* Exibe o conteúdo do dropdown ao passar o mouse */
+        .dropdown:hover .dropdown-content {
+            display: block; /* Mostra o conteúdo ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+ 
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">Notícias</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Contatos</a>
+            <div class="dropdown-content">
+                <a href="#">4002-8922</a>
+                <a href="#">0800</a>
+                <a href="#">99999-9999</a>
+            </div>
+        </li>
+    </ul>
+ 
+</body>
+</html>

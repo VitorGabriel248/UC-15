@@ -1,0 +1,52 @@
+.centers {
+    display: block;
+    margin: 5%;
+    max-width: 900px;
+    height: auto;
+    border: 8px solid black;
+    border-radius: 10px;
+
+}
+
+.texto {
+    border: 5px solid black;
+    border-radius: 9px;
+    margin: 100px;
+    text-align: center;
+    font-size: medium;
+
+}
+
+.footer {
+    border: 5px solid black;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+head {
+    background-color: rgb(41, 9, 9);
+}
+
+.titulo {
+    list-style-type: none;
+    background-color: rgb(121, 75, 15);
+
+    border: 10px solid black;
+    border-radius: 9px;
+    margin: 70px;
+    list-style-type: none;
+    text-align: center;
+}
+
+li a {
+    color: black;
+    list-style-type: none;
+    display: flex;
+}
+P{
+    border: 5px solid black;
+    border-radius: 10px;
+    text-align: center;
+}

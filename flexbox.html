@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+    <title>Exemplo Flexbox</title>
+   <style>
+    .container{
+       
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .item1{
+        flex: 1 1 200px;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        background-color:blue;
+        box-shadow:0 4px 8px  red;
+        transition: transfom 0,4s ease;
+
+
+    }
+
+    .item1:hover{
+
+transform: scale(1.05)
+
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item1"> Item 1</div>
+        <div class="item1"> Item 2</div>
+        <div class="item1"> Item 3</div>
+        <div class="item1"> Item 4</div>
+        <div class="item1"> Item 5</div>
+
+    </div>
+</body>
+</html>
+

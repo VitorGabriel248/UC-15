@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dropdown Aprimorado</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif; /* Fonte do corpo */
+            margin: 0; /* Remove margens padrão */
+            background-color: #f0f0f0; /* Cor de fundo da página */
+        }
+ 
+        .dropbtn {
+            background-color: blueviolet; /* Cor de fundo do botão */
+            color: white; /* Cor do texto */
+            padding: 16px; /* Preenchimento interno */
+            font-size: 16px; /* Tamanho da fonte */
+            border: none; /* Remove bordas */
+            cursor: pointer; /* Cursor de mão ao passar o mouse */
+            transition: background-color 0.3s; /* Transição suave para a cor de fundo */
+        }
+ 
+        .dropdown {
+            position: relative; /* Posiciona o dropdown em relação ao seu contêiner */
+            display: inline-block; /* Exibe em linha */
+        }
+ 
+        .dropdown-content {
+            display: none; /* Esconde o conteúdo do dropdown por padrão */
+            position: absolute; /* Posiciona o conteúdo em relação ao dropdown */
+            background-color: antiquewhite; /* Cor de fundo do conteúdo */
+            min-width: 160px; /* Largura mínima do conteúdo */
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); /* Sombra do conteúdo */
+            z-index: 1; /* Garante que o conteúdo fique acima de outros elementos */
+        }
+ 
+        .dropdown-content a {
+            color: black; /* Cor do texto dos links do dropdown */
+            padding: 12px 16px; /* Preenchimento interno dos links */
+            text-decoration: none; /* Remove o sublinhado */
+            display: block; /* Exibe os links em bloco */
+        }
+ 
+        .dropdown-content a:hover {
+            background-color: #f1f1f1; /* Cor de fundo ao passar o mouse */
+        }
+ 
+        .dropdown:hover .dropdown-content {
+            display: block; /* Mostra o conteúdo ao passar o mouse */
+        }
+ 
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41; /* Cor de fundo ao passar o mouse sobre o botão */
+        }
+    </style>
+</head>
+<body>
+ 
+    <div class="dropdown">
+        <button class="dropbtn">MENU</button>
+        <div class="dropdown-content">
+            <a href="#">Sobre</a>
+            <a href="#">Nosso Trabalho</a>
+            <a href="#">Contatos</a>  
+        </div>
+    </div>
+ 
+</body>
+</html>
